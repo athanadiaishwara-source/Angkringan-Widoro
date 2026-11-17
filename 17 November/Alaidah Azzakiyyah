@@ -1,1 +1,85 @@
-file:///D:/Documents/Documents/Default%20Project/17-nov.html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page Summary - 17 November</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 25px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        p, li {
+            color: #555;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .meta-info {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+        .meta-info p {
+            margin: 5px 0;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>One Page Summary</h1>
+        
+        <div class="meta-info">
+            <p>Nama: [Nama Lengkap Anda]</p>
+            <p>NIM: [NIM Anda]</p>
+            <p>Tanggal: 17 November</p>
+        </div>
+
+        <h2>1. Ringkasan / Latar Belakang</h2>
+        <p>Tuliskan ringkasan materi, pendahuluan, atau hasil riset utama pada bagian ini sesuai dengan topik tugas Anda.</p>
+
+        <h2>2. Poin-Poin Utama / Temuan Riset</h2>
+        <ul>
+            <li>Temuan atau poin penting pertama dari tugas/riset.</li>
+            <li>Temuan atau poin penting kedua dari tugas/riset.</li>
+            <li>Temuan atau poin penting ketiga dari tugas/riset.</li>
+        </ul>
+
+        <h2>3. Kesimpulan</h2>
+        <p>Tuliskan kesimpulan akhir atau hasil analisis dari keseluruhan tugas yang dikerjakan pada tanggal 17 November ini.</p>
+    </div>
+
+</body>
+</html>
