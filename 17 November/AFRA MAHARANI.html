@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Page Summary — 10 Market Leader POS Indonesia | Afra Maharani · 17 November 2026</title>
+<style>
+  :root{
+    --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f8fafc;
+    --brand:#0891b2; --brand2:#2563eb; --ok:#059669;
+    --card:#ffffff; --chip:#ecfeff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;font-size:14px}
+  .page{max-width:1100px;margin:0 auto;padding:28px 20px 40px}
+
+  header{background:linear-gradient(135deg,#083344 0%,#0891b2 55%,#2563eb 100%);color:#fff;border-radius:16px;padding:28px 30px;margin-bottom:18px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.08)}
+  .kicker{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+  .badge{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:3px 10px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.4px}
+  h1{font-size:26px;font-weight:800;letter-spacing:-.3px;max-width:780px}
+  .sub{opacity:.85;margin-top:6px;font-size:13px}
+
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--brand);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+  @media(max-width:800px){.grid2{grid-template-columns:1fr}}
+
+  .summary{font-size:14px}
+  .summary strong{color:var(--brand)}
+
+  .findings{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  @media(max-width:800px){.findings{grid-template-columns:1fr}}
+  .finding{display:flex;gap:9px;align-items:flex-start;font-size:13px}
+  .finding .dot{min-width:20px;height:20px;border-radius:6px;background:var(--chip);color:var(--brand);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+
+  .rank-list{display:flex;flex-direction:column;gap:8px}
+  .rank-card{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:#fcfcfe}
+  .rank-card.top{background:linear-gradient(90deg,#ecfeff,#fff);border-color:#a5f3fc}
+  .rank-no{width:36px;height:36px;border-radius:9px;background:var(--ink);color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center}
+  .rank-card.top .rank-no{background:linear-gradient(135deg,var(--brand),var(--brand2))}
+  .rank-name{font-weight:700;font-size:14px}
+  .rank-name small{font-weight:500;color:var(--muted)}
+  .rank-desc{font-size:12.5px;color:#334155;margin-top:2px}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+  .chip{background:var(--chip);color:#155e75;font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:999px}
+  .tier{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;align-self:center}
+  .tier.leader{background:#d1fae5;color:#065f46}
+  .tier.strong{background:#dbeafe;color:#1e40af}
+  .tier.niche{background:#fef3c7;color:#92400e}
+  @media(max-width:640px){.rank-card{grid-template-columns:36px 1fr}.tier{grid-column:2;justify-self:start}}
+
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:720px}
+  th{background:#f1f5f9;text-align:left;padding:9px 12px;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#475569;border-bottom:1px solid var(--line)}
+  td{padding:9px 12px;border-bottom:1px solid #eef1f5;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td b{color:var(--ink)}
+  .price{white-space:nowrap;font-variant-numeric:tabular-nums}
+
+  .insights{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media(max-width:800px){.insights{grid-template-columns:1fr}}
+  .insight{background:#f8faff;border:1px solid #e4e9f7;border-radius:10px;padding:12px 14px;font-size:12.5px}
+  .insight .ico{font-size:17px}
+  .insight b{display:block;margin:3px 0 2px;font-size:13px}
+
+  .reco{background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border:1px solid #a7f3d0;border-radius:12px;padding:16px 18px}
+  .reco .pick{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+  .reco .pick b{font-size:16px;color:#065f46}
+  .reco p{font-size:13px;color:#064e3b}
+
+  ol.sources{columns:2;column-gap:24px;font-size:12px;padding-left:18px}
+  @media(max-width:700px){ol.sources{columns:1}}
+  ol.sources li{margin-bottom:5px;break-inside:avoid}
+  ol.sources a{color:var(--brand);text-decoration:none;word-break:break-all}
+
+  footer{color:var(--muted);font-size:11.5px;text-align:center;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="kicker">
+      <span class="badge">RISET PASAR · POS INDONESIA</span>
+      <span class="badge">17 NOVEMBER 2026</span>
+      <span class="badge">AFRA MAHARANI</span>
+    </div>
+    <h1>One Page Summary — 10 Market Leader POS di Indonesia</h1>
+    <div class="sub">Dianalisis dari 12 sumber riset independen (media teknologi, market research, dan pembanding produk) · Fokus: siapa pemimpin pasar &amp; mengapa</div>
+  </header>
+
+  <div class="grid2">
+    <section>
+      <h2>📌 Ringkasan Utama</h2>
+      <p class="summary">
+        Pasar POS Indonesia bernilai <strong>±USD 562 juta (2025)</strong> dan tumbuh ~10% per tahun, didorong
+        <strong>39,3 juta merchant QRIS</strong> (93% di antaranya UMKM). Pemain lokal mendominasi (~70% pasar) di atas
+        vendor terminal global (PAX, Verifone, Ingenico). Pemimpin yang paling konsisten disorot sumber adalah
+        <strong>Moka POS (GoBiz/GoTo)</strong> — raja ekosistem F&amp;B dengan 40.000+ merchant — disusul
+        <strong>Majoo</strong> sebagai platform all-in-one dengan 40.000+ pengusaha di 600 kota.
+      </p>
+    </section>
+    <section>
+      <h2>🔎 Temuan Kunci</h2>
+      <div class="findings">
+        <div class="finding"><span class="dot">1</span><span>Skala endpoint POS berbayar: <b>1,9 juta</b> per 2025.</span></div>
+        <div class="finding"><span class="dot">2</span><span>Akuisisi Moka oleh Gojek (±USD 120 jt) mengubah persaingan jadi <b>perang ekosistem</b>.</span></div>
+        <div class="finding"><span class="dot">3</span><span><b>Qasir &amp; Kasir Pintar</b> menang di segmen mikro dengan model freemium.</span></div>
+        <div class="finding"><span class="dot">4</span><span>Faktor pembantu utama: <b>QRIS, mode offline, harga per outlet</b>.</span></div>
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <h2>🏆 10 Market Leader POS Indonesia</h2>
+    <div class="rank-list">
+      <div class="rank-card top">
+        <div class="rank-no">1</div>
+        <div><div class="rank-name">Moka POS / GoBiz <small>(GoTo Financial)</small></div>
+          <div class="rank-desc">Pionir 2014, diakuisisi Gojek 2020. Fitur F&amp;B terlengkap: inventaris level bahan, GoFood/GoPay, mode offline, analitik kuat. >45.000 merchant.</div>
+          <div class="chips"><span class="chip">Integrasi Gojek</span><span class="chip">F&amp;B</span><span class="chip">Multi-cabang</span></div>
+        </div>
+        <span class="tier leader">MARKET LEADER</span>
+      </div>
+      <div class="rank-card top">
+        <div class="rank-no">2</div>
+        <div><div class="rank-name">Majoo</div>
+          <div class="rank-desc">Super-app UMKM: POS + akuntansi + CRM + HR + inventaris. 40.000+ pengusaha di 600 kota; integrasi marketplace &amp; pembiayaan.</div>
+          <div class="chips"><span class="chip">All-in-one</span><span class="chip">Ritel + F&amp;B</span></div>
+        </div>
+        <span class="tier leader">MARKET LEADER</span>
+      </div>
+      <div class="rank-card">
+        <div class="rank-no">3</div>
+        <div><div class="rank-name">Pawoon</div>
+          <div class="rank-desc">Sudah sejak 2013, terkuat di F&amp;B; versi gratis, integrasi Jurnal/Accurate, mode offline. Sejumlah analisis 2022 menilai market share kualitatifnya tertinggi.</div>
+          <div class="chips"><span class="chip">F&amp;B</span><span class="chip">Freemium</span></div>
+        </div>
+        <span class="tier strong">STRONG CHALLENGER</span>
+      </div>
+      <div class="rank-card">
+        <div class="rank-no">4</div>
+        <div><div class="rank-name">Olsera</div>
+          <div class="rank-desc">Spesialis omnichannel: sinkronisasi stok online–offline, integrasi marketplace, loyalty. Pilihan UMKM yang ingin "naik kelas" ke digital.</div>
+          <div class="chips"><span class="chip">Omnichannel</span><span class="chip">E-commerce</span></div>
+        </div>
+        <span class="tier strong">STRONG CHALLENGER</span>
+      </div>
+      <div class="rank-card">
+        <div class="rank-no">5</div>
+        <div><div class="rank-name">ESB POS</div>
+          <div class="rank-desc">Dari PT Esensi Solusi Buana; berbasis Android/cloud untuk restoran: KDS (layar dapur), ojek online, QRIS. Dipuji di review F&amp;B 2025–2026.</div>
+          <div class="chips"><span class="chip">Restoran</span><span class="chip">Kitchen display</span></div>
+        </div>
+        <span class="tier strong">STRONG CHALLENGER</span>
+      </div>
+      <div class="rank-card">
+        <div class="rank-no">6</div>
+        <div><div class="rank-name">Qasir</div>
+          <div class="rank-desc">Juara segmen mikro: versi gratis paling murah hati, jalan di smartphone apa pun, fitur à la carte. Disebut "champion" untuk warung &amp; solopreneur.</div>
+          <div class="chips"><span class="chip">Mikro</span><span class="chip">Gratis</span></div>
+        </div>
+        <span class="tier niche">SEGMENT KING</span>
+      </div>
+      <div class="rank-card">
+        <div class="rank-no">7</div>
+        <div><div class="rank-name">Kasir Pintar</div>
+          <div class="rank-desc">Sejak 2017; antarmuka sederhana, tier gratis, mulai Rp 55.500/bln. Recurring dalam daftar "terbaik" untuk UMKM kecil &amp; kios.</div>
+          <div class="chips"><span class="chip">Budget</span><span class="chip">Warung</span></div>
+        </div>
+        <span class="tier niche">SEGMENT KING</span>
+      </div>
+      <div class="rank-card">
+        <div class="rank-no">8</div>
+        <div><div class="rank-name">iREAP POS</div>
+          <div class="rank-desc">Kasir Android offline/online paling terjangkau (gratis → Rp 79.000/bln); andal untuk toko kecil multi-cabang dengan internet tidak stabil.</div>
+          <div class="chips"><span class="chip">Offline-first</span><span class="chip">Ritel kecil</span></div>
+        </div>
+        <span class="tier niche">NICHE PLAYER</span>
+      </div>
+      <div class="rank-card">
+        <div class="rank-no">9</div>
+        <div><div class="rank-name">Youtap</div>
+          <div class="rank-desc">Backed oleh grup telko/mitra besar; versi gratis lalu Rp 199.000/bln, generalis F&amp;B–ritel–jasa, QRIS penuh.</div>
+          <div class="chips"><span class="chip">Generalis</span><span class="chip">QRIS</span></div>
+        </div>
+        <span class="tier niche">NICHE PLAYER</span>
+      </div>
+      <div class="rank-card">
+        <div class="rank-no">10</div>
+        <div><div class="rank-name">iSeller</div>
+          <div class="rank-desc">Omnichannel ritel &amp; restoran: integrasi e-commerce + POS fisik; masuk daftar Top-10 pemain di laporan pasar nasional 2026.</div>
+          <div class="chips"><span class="chip">Omnichannel</span><span class="chip">Ritel</span></div>
+        </div>
+        <span class="tier niche">NICHE PLAYER</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📊 Perbandingan Cepat (Harga 2025–2026, dari situs vendor)</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Aplikasi</th><th>Harga Mulai</th><th>Versi Gratis</th><th>QRIS</th><th>Offline</th><th>Cocok Untuk</th></tr>
+        <tr><td><b>Moka/GoBiz</b></td><td class="price">Rp 299.000–799.000</td><td>Ya (terbatas)</td><td>✅</td><td>✅ kuat</td><td>F&amp;B &amp; ritel, ekosistem Gojek</td></tr>
+        <tr><td><b>Majoo</b></td><td class="price">Rp 149.000–999.000</td><td>✕</td><td>✅</td><td>✅</td><td>Bisnis menengah all-in-one</td></tr>
+        <tr><td><b>Pawoon</b></td><td class="price">Gratis → Rp 149.000</td><td>Ya (7 trx/hari)</td><td>✅</td><td>✅</td><td>Restoran, kafe, warung</td></tr>
+        <tr><td><b>Olsera</b></td><td class="price">Berbayar (via sales)</td><td>Terbatas</td><td>✅</td><td>✅</td><td>Toko offline + online</td></tr>
+        <tr><td><b>ESB</b></td><td class="price">Gratis → Rp 499.000</td><td>Ya</td><td>✅</td><td>—</td><td>Restoran &amp; kafe</td></tr>
+        <tr><td><b>Qasir</b></td><td class="price">Gratis (add-on)</td><td>Ya, paling lengkap</td><td>✅</td><td>✅</td><td>Warung, mikro, solopreneur</td></tr>
+        <tr><td><b>Kasir Pintar</b></td><td class="price">Gratis → Rp 55.500</td><td>Ya</td><td>✅</td><td>✅</td><td>Kios, UMKM pemula</td></tr>
+        <tr><td><b>iREAP POS</b></td><td class="price">Gratis → Rp 79.000</td><td>Ya (Lite)</td><td>✅</td><td>✅</td><td>Toko kecil 1 kasir</td></tr>
+        <tr><td><b>Youtap</b></td><td class="price">Gratis → Rp 199.000</td><td>Ya</td><td>✅</td><td>—</td><td>Generalis multi-bidang</td></tr>
+        <tr><td><b>iSeller</b></td><td class="price">Berbayar</td><td>✕</td><td>✅</td><td>✅</td><td>Ritel omnichannel</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>💡 Analisis: Mana yang Terbaik &amp; Mengapa</h2>
+    <div class="insights">
+      <div class="insight"><span class="ico">🥇</span><b>Terbaik keseluruhan: Moka/GoBiz</b>Konsensus 12 sumber menempatkannya #1: fitur F&amp;B terlengkap, offline mode andal, dan integrasi GoFood/GoPay yang tak tertandingi — keunggulan kompetitif struktural, bukan sekadar fitur.</div>
+      <div class="insight"><span class="ico">🥈</span><b>Terbaik all-in-one: Majoo</b>Satu platform untuk kasir, stok, akuntansi, CRM, HR. Paling cocok untuk bisnis berkembang/multi-cabang yang ingin merampingkan semua operasional sekaligus.</div>
+      <div class="insight"><span class="ico">🥉</span><b>Terbaik untuk UMKM mikro: Qasir</b>Gratis, simpel, QRIS, offline. Nilai terbaik vs biaya untuk warung/usaha rintisan — meski perlu migrasi saat bisnis membesar.</div>
+    </div>
+    <div class="reco" style="margin-top:12px">
+      <div class="pick"><b>⚠️ Kesimpulan Afra</b><span style="color:#065f46;font-weight:600">"Terbaik" bergantung pada segmen:</span></div>
+      <p>F&amp;B dengan GoFood → <b>Moka/GoBiz</b>. Ritel multi-fungsi berkembang → <b>Majoo</b>. Mikro &amp; kios → <b>Qasir/Kasir Pintar</b>. Omnichannel marketplace → <b>Olsera/iSeller</b>. Yang membedakan pemimpin pasar bukan harga, tapi <b>ekosistem, keandalan offline, dan QRIS</b> — tiga faktor yang paling sering muncul di semua sumber.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>📚 12 Sumber Riset</h2>
+    <ol class="sources">
+      <li>Ken Research — <i>Indonesia POS Market Report 2026–2031</i> (ukuran pasar &amp; Top-10 pemain) <a href="https://www.kenresearch.com/industry-reports/indonesia-pos-market">kenresearch.com</a></li>
+      <li>Locality Partners — <i>POS &amp; SME Software Competitor Analysis (2026)</i> <a href="https://www.localitypartners.com/insights/indonesia-pos-sme-software-competitor-analysis.html">localitypartners.com</a></li>
+      <li>Topos Digital — <i>Perbandingan 5 Aplikasi POS Terbaik 2025</i> <a href="https://toposdigital.com/blog/perbandingan-aplikasi-pos-terbaik-indonesia/">toposdigital.com</a></li>
+      <li>Pelanggan.co.id — <i>Review Aplikasi Kasir Terpopuler</i> <a href="https://blog.pelanggan.co.id/review-aplikasi-kasir-terpopuler-di-indonesia/">blog.pelanggan.co.id</a></li>
+      <li>EatHealthy365 — <i>A Comparison of POS Software Providers in Indonesia (2025)</i> <a href="https://eathealthy365.com/comparing-the-best-pos-software-indonesia/">eathealthy365.com</a></li>
+      <li>Posmana.id — <i>POS Apps for Small Businesses + data terverifikasi</i> <a href="https://posmana.id/en/pos-apps-for-small-business/">posmana.id</a></li>
+      <li>Equiperp — <i>15 Aplikasi Kasir Retail Terbaik 2026</i> (POS consultant reviewed) <a href="https://www.equiperp.com/blog/aplikasi-kasir-retail/">equiperp.com</a></li>
+      <li>Hitpay — <i>7 Aplikasi POS Gratis Terbaik Indonesia</i> <a href="https://hitpayapp.com/blog/sistem-aplikasi-pos-gratis-di-indonesia">hitpayapp.com</a></li>
+      <li>Nashtify — <i>Rekomendasi Aplikasi POS Terlengkap</i> <a href="https://nashtify.com/rekomendasi-aplikasi-pos/">nashtify.com</a></li>
+      <li>CompanyBoen Market Research — <i>Analisis Kompetitor POS &amp; Pembayaran Digital</i> <a href="https://companyboen.wixsite.com/marketresearch/post/analisis-kompetitor-layanan-aplikasi-kasir-atau-point-of-sales-pos-pengguna-pembayaran-digital">companyboen.wixsite.com</a></li>
+      <li>Grokipedia — <i>POS Software Providers in Indonesia</i> (riwayat akuisisi Moka–Gojek) <a href="https://grokipedia.com/page/POS_Software_Providers_in_Indonesia">grokipedia.com</a></li>
+      <li>Rasupe — <i>10 Aplikasi Kasir Terbaik di Indonesia 2025</i> <a href="https://rasupe.com/10-aplikasi-kasir-terbaik-di-indonesia-2025/">rasupe.com</a></li>
+    </ol>
+  </section>
+
+  <footer>Dibuat oleh Afra Maharani · 17 November 2026 · Repo: go-go-UMKM · Harga dapat berubah; cek situs resmi vendor sebelum berlangganan.</footer>
+</div>
+</body>
+</html>
