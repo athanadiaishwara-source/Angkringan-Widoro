@@ -2,12 +2,10 @@ name = "angkringan-widoro"
 compatibility_date = "2024-04-01"
 pages_build_output_dir = "public"
 
-# Cloudflare D1 Relational Database Binding
-# Untuk membuat D1 database di Cloudflare: npx wrangler d1 create angkringan-widoro-db
 [[d1_databases]]
 binding = "DB"
 database_name = "angkringan-widoro-db"
-database_id = "xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" # Ganti dengan ID database D1 Anda saat deploy
+database_id = "ad2a7abe-fc05-456c-bb9b-756869d904cb"
 
 [vars]
 ENVIRONMENT = "production"
