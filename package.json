@@ -1,0 +1,22 @@
+{
+  "name": "angkringan-widoro-website",
+  "version": "1.0.0",
+  "description": "Website Profil Perusahaan & Venue Pernikahan Angkringan Widoro (Nguliner Neng Kebon, Klaten)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "seed": "node data/seed.js",
+    "build": "echo 'Build complete: Static and Edge ready for Cloudflare Pages'"
+  },
+  "keywords": [
+    "angkringan-widoro",
+    "wedding-venue",
+    "javanese-heritage",
+    "klaten",
+    "full-stack",
+    "cloudflare-pages"
+  ],
+  "author": "Angkringan Widoro",
+  "license": "ISC"
+}

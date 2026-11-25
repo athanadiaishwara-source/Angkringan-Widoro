@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .kawung { fill: none; stroke: #A4774F; stroke-width: 0.75; stroke-opacity: 0.15; }
+      .center-dot { fill: #593B2C; fill-opacity: 0.12; }
+      .cross { stroke: #68704D; stroke-width: 0.5; stroke-opacity: 0.12; }
+    </style>
+  </defs>
+  <!-- Kawung 4 Ellipses Pattern -->
+  <g transform="translate(40, 40)">
+    <ellipse cx="0" cy="-18" rx="9" ry="16" class="kawung" />
+    <ellipse cx="0" cy="18" rx="9" ry="16" class="kawung" />
+    <ellipse cx="-18" cy="0" rx="16" ry="9" class="kawung" />
+    <ellipse cx="18" cy="0" rx="16" ry="9" class="kawung" />
+    <circle cx="0" cy="0" r="3" class="center-dot" />
+    <line x1="-5" y1="0" x2="5" y2="0" class="cross" />
+    <line x1="0" y1="-5" x2="0" y2="5" class="cross" />
+  </g>
+  <!-- Corner Petals -->
+  <g transform="translate(0, 0)">
+    <ellipse cx="0" cy="-18" rx="9" ry="16" class="kawung" />
+    <ellipse cx="0" cy="18" rx="9" ry="16" class="kawung" />
+    <ellipse cx="-18" cy="0" rx="16" ry="9" class="kawung" />
+    <ellipse cx="18" cy="0" rx="16" ry="9" class="kawung" />
+    <circle cx="0" cy="0" r="3" class="center-dot" />
+  </g>
+  <g transform="translate(80, 0)">
+    <ellipse cx="0" cy="-18" rx="9" ry="16" class="kawung" />
+    <ellipse cx="0" cy="18" rx="9" ry="16" class="kawung" />
+    <ellipse cx="-18" cy="0" rx="16" ry="9" class="kawung" />
+    <ellipse cx="18" cy="0" rx="16" ry="9" class="kawung" />
+    <circle cx="0" cy="0" r="3" class="center-dot" />
+  </g>
+  <g transform="translate(0, 80)">
+    <ellipse cx="0" cy="-18" rx="9" ry="16" class="kawung" />
+    <ellipse cx="0" cy="18" rx="9" ry="16" class="kawung" />
+    <ellipse cx="-18" cy="0" rx="16" ry="9" class="kawung" />
+    <ellipse cx="18" cy="0" rx="16" ry="9" class="kawung" />
+    <circle cx="0" cy="0" r="3" class="center-dot" />
+  </g>
+  <g transform="translate(80, 80)">
+    <ellipse cx="0" cy="-18" rx="9" ry="16" class="kawung" />
+    <ellipse cx="0" cy="18" rx="9" ry="16" class="kawung" />
+    <ellipse cx="-18" cy="0" rx="16" ry="9" class="kawung" />
+    <ellipse cx="18" cy="0" rx="16" ry="9" class="kawung" />
+    <circle cx="0" cy="0" r="3" class="center-dot" />
+  </g>
+</svg>

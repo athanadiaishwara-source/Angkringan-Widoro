@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldWood" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A4774F" />
+      <stop offset="50%" stop-color="#C59E74" />
+      <stop offset="100%" stop-color="#593B2C" />
+    </linearGradient>
+    <linearGradient id="walnutGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#593B2C" />
+      <stop offset="100%" stop-color="#3D281E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Joglo Icon -->
+  <g transform="translate(10, 15) scale(0.85)">
+    <!-- Joglo Roof Tiers -->
+    <path d="M 50 15 L 35 38 L 65 38 Z" fill="#A4774F" />
+    <path d="M 50 22 L 20 52 L 80 52 Z" fill="#593B2C" />
+    <path d="M 50 35 L 5 75 L 95 75 Z" fill="#A4774F" opacity="0.95" />
+    <!-- Pillars (Sokoguru) -->
+    <rect x="24" y="75" width="6" height="32" rx="1" fill="#593B2C" />
+    <rect x="70" y="75" width="6" height="32" rx="1" fill="#593B2C" />
+    <rect x="47" y="75" width="6" height="32" rx="1" fill="#68704D" />
+    <!-- Floor Base -->
+    <rect x="0" y="104" width="100" height="6" rx="2" fill="#593B2C" />
+    <!-- Sunlight / Heritage Ornament -->
+    <circle cx="50" cy="8" r="4" fill="#C59E74" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(110, 30)">
+    <!-- Brand Name -->
+    <text x="0" y="32" font-family="'Playfair Display', 'Cinzel', 'Georgia', serif" font-size="30" font-weight="700" fill="#593B2C" letter-spacing="1.5">
+      ANGKRINGAN
+    </text>
+    <text x="0" y="62" font-family="'Playfair Display', 'Cinzel', 'Georgia', serif" font-size="32" font-weight="900" fill="#A4774F" letter-spacing="3.5">
+      WIDORO
+    </text>
+    <!-- Tagline -->
+    <text x="2" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="600" fill="#68704D" letter-spacing="2.5">
+      NGULINER NENG KEBON • KLATEN
+    </text>
+  </g>
+</svg>
