@@ -9,6 +9,17 @@ const AdminApp = {
   stats: {},
 
   async init() {
+    // Handle redirect parameter if forwarded from public index.html
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('route')) {
+      this.currentPath = decodeURIComponent(urlParams.get('route'));
+      window.history.replaceState({}, '', this.currentPath);
+    } else if (this.currentPath === '/admin' || this.currentPath === '/admin/' || this.currentPath === '/admin/index.html') {
+      const token = API.getToken();
+      this.currentPath = token ? '/admin/dashboard' : '/admin/login';
+      window.history.replaceState({}, '', this.currentPath);
+    }
+
     this.setupNavigation();
     await this.checkAuth();
     this.renderAdminPage(this.currentPath);

@@ -17,6 +17,15 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
 
+  <!-- Safeguard: If user accesses any /admin URL while on this public index template,
+       seamlessly forward to the admin SPA interface -->
+  <script>
+    if (window.location.pathname.startsWith('/admin')) {
+      const targetRoute = window.location.pathname;
+      window.location.replace('/admin/index.html?route=' + encodeURIComponent(targetRoute));
+    }
+  </script>
+
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/public.css">
@@ -45,7 +54,7 @@
         <a href="/wedding-venue#wedding-inquiry-section" class="btn btn-secondary" style="padding: 9px 20px; font-size: 0.88rem;">
           Inquiry Venue
         </a>
-        <a href="/admin/login" class="nav-admin-link" title="Masuk ke Panel Pengelola">
+        <a href="/admin/" class="nav-admin-link" title="Masuk ke Panel Pengelola">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
           <span>Admin</span>
         </a>
@@ -120,7 +129,7 @@
           &copy; 2024–2026 Angkringan Widoro. Seluruh Hak Cipta Dilindungi Undang-Undang.
         </div>
         <div>
-          <a href="/admin/login" style="color: rgba(247,243,234,0.6); text-decoration: underline;">Portal Pengelola Restoran</a>
+          <a href="/admin/" style="color: rgba(247,243,234,0.6); text-decoration: underline;">Portal Pengelola Restoran</a>
         </div>
       </div>
     </div>

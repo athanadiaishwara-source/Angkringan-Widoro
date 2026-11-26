@@ -79,6 +79,12 @@ const PublicApp = {
   },
 
   async renderPage(path) {
+    // If an /admin route is being requested on the public template, forward to admin template
+    if (path.startsWith('/admin')) {
+      window.location.replace('/admin/index.html?route=' + encodeURIComponent(path));
+      return;
+    }
+
     this.updateActiveNav(path);
     const contentEl = document.getElementById('main-content');
     if (!contentEl) return;
